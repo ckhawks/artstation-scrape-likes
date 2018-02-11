@@ -1,32 +1,32 @@
 artstation-scrape-likes
 ====
-This is python script to download all the images from your artstation likes to the location of the script.
+This is a python script to download all the images from your artstation likes to the location of the script.
 
 Quick install guide:
 ----
-Download/clone repository
+1. Download/clone repository
 
-Install python 3: https://www.python.org/downloads/
+2. Install python 3: https://www.python.org/downloads/
 
-Install selenium:
+3. Install selenium:
 ```
 pip3 install selenium
 ```
 
-Download chromedriver: https://sites.google.com/a/chromium.org/chromedriver/
+4. Download chromedriver: https://sites.google.com/a/chromium.org/chromedriver/
 
-Add chromedriver to $PATH
+5. Add chromedriver to $PATH
 
 Running the script:
 ----
-cd to the location of the script.
+1. cd to the location of the script.
 
-Execute in terminal:
+2. Execute in terminal:
 
 ```
 python3 artstation_selenium_scrape.py 
 ```
 
-Input your artstation username.
+3. Input your artstation username.
 
-Wait until it is done!
+4. Wait until it is done!
