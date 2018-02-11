@@ -1,6 +1,6 @@
 artstation-scrape-likes
 ====
-This is python script to scrape all the images from your artstation likes.
+This is python script to download all the images from your artstation likes to the location of the script.
 
 Quick install guide:
 ----
