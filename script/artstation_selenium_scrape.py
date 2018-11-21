@@ -19,9 +19,9 @@ class AppURLopener(urllib.request.FancyURLopener):
 
 def scrolldown(int):
     i = 0
-    AMOUNTOFSCROLLDOWNATTEMPTS = int
+    amount_of_scroll_down_attempts = int
     # Scrolls to the bottom of the page, ensuring that all images are loaded in.
-    while i < AMOUNTOFSCROLLDOWNATTEMPTS:
+    while i < amount_of_scroll_down_attempts:
         driver.execute_script(
             "window.scrollTo(0, document.body.scrollHeight);")
         time.sleep(0.5)
@@ -69,13 +69,14 @@ def ensure_amount_of_likes_correct():
                 if input_amount_of_favourites != "":
                     amount_of_actual_favourites = int(input_amount_of_favourites)
                     break
+                count = 0
         else:
             count = 0
         amount_of_actual_favourites = len(links_list)
     return links_list
 
 
-def getUsername():
+def get_username():
     # Requests user to put in their artstation username to get their likes.
     response = input("Please enter your artstation username: ")
 
@@ -89,7 +90,7 @@ def getUsername():
 
 # Opens the webpage for likes.
 opener = AppURLopener()
-driver.get("https://www.artstation.com/" + getUsername() + "/likes")
+driver.get("https://www.artstation.com/" + get_username() + "/likes")
 print("Opened webpage")
 
 links_list = ensure_amount_of_likes_correct()
