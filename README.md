@@ -26,7 +26,12 @@ Running the script:
 ```
 python3 artstation_selenium_scrape.py 
 ```
-
 3. Input your artstation username.
 
 4. Wait until it is done!
+
+If the artstation like counter does not equal the actual amount of likes:
+----
+The script will count the amount of likes it has found, if it hits the same amount of likes 3 times it will request input, here you can put the amount of likes there actually are.
+
+Or if you think it should have more likes just hit enter and it will continue trying to find more likes.
