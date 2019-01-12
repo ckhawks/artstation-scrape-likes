@@ -6,7 +6,7 @@ import urllib.request
 # Loads the driver in headless mode.
 options = webdriver.ChromeOptions()
 options.add_argument("--headless")
-driver = webdriver.Chrome()
+driver = webdriver.Chrome(chrome_options=options)
 
 
 # Class used to get through artstation's block of spider header
