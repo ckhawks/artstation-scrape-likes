@@ -48,19 +48,20 @@ def ensure_amount_of_likes_correct():
         "//span[@class='counter-number']").text
     amount_of_favourites = amount_of_favourites.strip("()")
     amount_of_favourites = amount_of_favourites.strip(",")
+
     amount_of_favourites = int(amount_of_favourites)
     # Scrolls down the page until all likes have been loaded into the list.
     print("estimated favourites: ")
     print(amount_of_favourites)
     count = 0
     amount_of_actual_favourites = 0
-    print("counted favourites: ")   
+    print("counted favourites: ")
     while len(links_list) != amount_of_favourites:
         scrolldown(1)
         links_list = links()
         print(len(links_list))
         if amount_of_actual_favourites == len(links_list):
-            count = 3
+            count = count + 1
             if count > 2:
                 print(len(links_list))
                 input_amount_of_favourites = input(
@@ -69,9 +70,9 @@ def ensure_amount_of_likes_correct():
                 if input_amount_of_favourites != "":
                     amount_of_actual_favourites = int(input_amount_of_favourites)
                     break
-                count = 3
+                count = 0
         else:
-            count = 3
+            count = 0
         amount_of_actual_favourites = len(links_list)
     return links_list
 
