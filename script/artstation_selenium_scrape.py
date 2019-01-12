@@ -47,8 +47,7 @@ def ensure_amount_of_likes_correct():
     amount_of_favourites = driver.find_element_by_xpath(
         "//span[@class='counter-number']").text
     amount_of_favourites = amount_of_favourites.strip("()")
-    amount_of_favourites = amount_of_favourites.strip(",")
-
+    amount_of_favourites = amount_of_favourites.replace(",", "")
     amount_of_favourites = int(amount_of_favourites)
     # Scrolls down the page until all likes have been loaded into the list.
     print("estimated favourites: ")
