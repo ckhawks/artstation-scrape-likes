@@ -102,7 +102,7 @@ for link in links_list:
 
     # Finds the elements with the class artwork-image.
     images = driver.find_elements_by_xpath(
-        "//div[@class=\"artwork-image\"]/img")
+        "//div[@class=\"artwork-image\"]/picture/img")
 
     for image in images:
         src = image.get_attribute("src")
